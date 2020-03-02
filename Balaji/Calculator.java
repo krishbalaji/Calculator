@@ -117,7 +117,7 @@ public class Calculator {
             Scanner scan = new Scanner(System.in);
             System.out.print("Operator: ");
             operator = scan.nextLine();
-            if (operator.equals("=")) break;
+            if (operator == null || operator.length() < 1 || operator.equals("=")) break;
 
             if (loop == 0) {
                 System.out.print("First Value: ");
