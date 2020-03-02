@@ -112,6 +112,7 @@ public class Calculator {
         String operator = "";
         double a = 0, b = 0;
 
+        //infinite loop and the "=" operator breaks the loop
         while (true) {
             Scanner scan = new Scanner(System.in);
             System.out.print("Operator: ");
