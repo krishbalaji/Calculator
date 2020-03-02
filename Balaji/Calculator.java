@@ -12,6 +12,27 @@ Polymorphism: The ability to appear in many forms. Two types of polymorphism: ru
 javac - Java Compiler
 java to run the program
 JVM - Java Virtual Machine, converts Java Byte code to Native Byte Code, the layer which makes OS agnostic
+JRE - Java Runtime Engine
+JDK - Java Development Kit
+
+Operators:
+Unary Operator,
+Arithmetic Operator,
+Shift Operator,
+Relational Operator,
+Bitwise Operator,
+Logical Operator,
+Ternary Operator and
+Compound Assignment Operator.
+
+- switch statement
+- Break statement
+- continue statement
+-Homework: Prime, Palindrome, Factorial, Recursion
+-Arrays
+-class, method, package, constant, instance level, static variables, local variables
+-structure of a class: Name, Instance Level Variables, Static Variables, Methods, Static Methods
+-Stack Vs Heap
  */
 //Access Modifiers
 //      Public - Accessible from outside
