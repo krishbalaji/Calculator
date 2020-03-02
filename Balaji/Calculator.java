@@ -1,3 +1,18 @@
+import java.util.Scanner;
+
+//NOTES:
+/*
+Class: A class is a template or blueprint that defines data members and method.
+Object: An object is a real-world entity that can be identified distinctly. Objects will be created from a class using "new" operator
+Abstraction: An abstraction is a method of hiding irrelevant information from the user.
+Encapsulation: An encapsulation is the process of binding data and functions.
+Inheritance: Inheritance is the mechanism in which one class acquire all the features of another class.
+Polymorphism: The ability to appear in many forms. Two types of polymorphism: run time  and compile-time.
+ 
+javac - Java Compiler
+java to run the program
+JVM - Java Virtual Machine, converts Java Byte code to Native Byte Code, the layer which makes OS agnostic
+ */
 //Access Modifiers
 //      Public - Accessible from outside
 //      Protected - Accessible within Package
@@ -8,13 +23,13 @@ public class Calculator {
     //Program can't run without this method
     public static void main (String[] args) {
         //Basics
-        Basics();
+        //Basics();
 
         //For Loop
-        ForLoopMethod();
+        //ForLoopMethod();
 
         //While Loop
-        WhileLoopMethod();
+        //WhileLoopMethod();
 
         //Calculator
         CalculatorMethod();
@@ -82,7 +97,7 @@ public class Calculator {
     public static void WhileLoopMethod() {
         System.out.println("While Loop Method");
 
-        //NOTE: The variables are declared outside the while loop method, so the variables are accessible after the while loop finishes
+        //NOTE: The variables are declared outside the while loop method are accessible after the while loop finishes
         //make sure the condition of the while loop does not result in "infinite" condition
         int i = 0;
         while (i < 10) {
@@ -92,5 +107,49 @@ public class Calculator {
     }
 
     public static void CalculatorMethod() {
+        double result = 0;
+        int loop = 0;
+        String operator = "";
+        double a = 0, b = 0;
+
+        while (true) {
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Operator: ");
+            operator = scan.nextLine();
+            if (operator.equals("=")) break;
+
+            if (loop == 0) {
+                System.out.print("First Value: ");
+                a = scan.nextDouble();
+            }
+
+            System.out.print("Second Value: ");
+            b = scan.nextDouble();
+
+            if (operator.equals("+")) result = Add(a, b);
+            else if (operator.equals("-")) result = Subtract(a, b);
+            else if (operator.equals("*")) result = Multiply(a, b);
+            else if (operator.equals("/")) result = Divide(a, b);
+            else break;
+
+            loop++;
+            a = result;
+            System.out.println("output:" + result);
+        }
+        System.out.println("The result is " + result);
+    }
+
+    //Calculator Methods
+    public static double Add(double a, double b) {
+        return a+b;
+    }
+    public static double Subtract(double a, double b) {
+        return a-b;
+    }
+    public static double Multiply(double a, double b) {
+        return a*b;
+    }
+    public static double Divide(double a, double b) {
+        return a/b;
     }
 }
